@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&display=swap');
+
+:root {
+  --parchment: #F5F0E8;
+  --parchment-dark: #E8DFD0;
+  --ink: #2C2420;
+  --ink-light: #6B5D52;
+  --ink-faint: #9B8E83;
+  --chaos-red: #D4564E;
+  --chaos-coral: #E8876B;
+  --rebuild-purple: #8B6DAF;
+  --rebuild-violet: #B794D6;
+  --descent-amber: #C4923A;
+  --descent-dark: #5C4023;
+  --return-green: #4A8C6F;
+  --return-light: #6DBF8B;
+  --serif: 'Cormorant Garamond', 'Libre Baskerville', Georgia, serif;
+  --body: 'Libre Baskerville', Georgia, serif;
+  --mono: 'DM Mono', 'Courier New', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--body);
+  background: var(--parchment);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --parchment: #1a1a1a;
+    --parchment-dark: #111111;
+    --ink: #F5F0E8;
+    --ink-light: #DDD1C2;
+    --ink-faint: #C8BDB0;
+  }
+
+  body {
+    background: #1a1a1a;
+    color: #E8DFD0;
+  }
+}
