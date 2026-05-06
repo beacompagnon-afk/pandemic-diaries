@@ -793,7 +793,7 @@ body::before {
     <div class="ending" id="ending">
       <div class="ending-eyebrow">★ Final Score ★</div>
       <div class="ending-gameover">Game<br>Over</div>
-      <div class="ending-subtitle"><em>14 destinations</em><br>in 299 days</div>
+      <div class="ending-subtitle"><em>15 destinations</em><br>in 299 days</div>
       <div class="ending-final" id="finalScore">0000000</div>
       <div class="ending-final-label">final score</div>
       <div class="stats-readout">
@@ -801,7 +801,7 @@ body::before {
         <div class="stats-row">
           <span class="lbl">BOUNCES</span>
           <span class="dots">................</span>
-          <span class="val">14</span>
+          <span class="val">15</span>
         </div>
         <div class="stats-row">
           <span class="lbl">COUNTRIES</span>
@@ -847,14 +847,15 @@ const machine  = document.getElementById('machine');
 
 const PLACES = {
   hoian:  { name: 'Hoi An',    region: 'home',   x: 260, y: 100 },
-  danang: { name: 'Da Nang',   region: 'asia',   x: 160, y: 160 },
-  sing:   { name: 'Singapore', region: 'asia',   x: 360, y: 200 },
-  sea:    { name: 'Seattle',   region: 'usa',    x: 85,  y: 240 },
+  hanoi:  { name: 'Hanoi',     region: 'asia',   x: 415, y: 125 },
+  danang: { name: 'Da Nang',   region: 'asia',   x: 140, y: 175 },
+  sing:   { name: 'Singapore', region: 'asia',   x: 355, y: 210 },
+  sea:    { name: 'Seattle',   region: 'usa',    x: 70,  y: 255 },
   penang: { name: 'Penang',    region: 'asia',   x: 240, y: 290 },
-  kl:     { name: 'KL',        region: 'asia',   x: 430, y: 300 },
+  kl:     { name: 'KL',        region: 'asia',   x: 435, y: 300 },
   doha:   { name: 'Doha',      region: 'europe', x: 115, y: 390 },
   vie:    { name: 'Vienna',    region: 'europe', x: 310, y: 380 },
-  par:    { name: 'Paris',     region: 'europe', x: 425, y: 420 },
+  par:    { name: 'Paris',     region: 'europe', x: 435, y: 420 },
   sic:    { name: 'Sicily',    region: 'europe', x: 185, y: 440 },
 };
 
@@ -873,6 +874,7 @@ const SEQUENCE = [
   { key: 'vie',    pts: 1500, note: 'EUROPE!' },
   { key: 'par',    pts: 2500, note: 'PARIS!' },
   { key: 'sic',    pts: 2000, note: 'SICILY!' },
+  { key: 'hanoi',  pts: 1500, note: 'HANOI!' },
   { key: 'hoian',  pts: 5000, note: 'HOME RUN!', final: true },
 ];
 
@@ -1076,9 +1078,9 @@ async function play() {
     await sleep(stepItem.final ? 950 : 260);
   }
 
-  // Final flourish: tick destinations up to 14, bonus score
+  // Final flourish: tick destinations up to 15, bonus score
   await sleep(350);
-  bumpDestination(14);
+  bumpDestination(15);
   addScore(5000);
 
   await sleep(1100);
